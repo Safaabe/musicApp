@@ -22,7 +22,8 @@ ul li a{
   font-weight: 500;
   font-style: normal;  
   padding-right: 10px;  
-  
+ position: relative;
+ top: 100px;
 }
 a .logo{
     text-decoration: none;
@@ -38,14 +39,10 @@ ul li{
     height: 1px;               
     background-color: rgb(90, 89, 89);  
     margin: 20px 0; 
+    
+    
 }
-h4{
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
 
-}
 .playlist a{
     text-decoration: none;
     font-family: "Roboto", sans-serif;
@@ -54,6 +51,8 @@ h4{
     font-size: 20px;
     color: white;
 }
-.plus{
-    
+.image{
+    width: 150px;
+    position: absolute;
+    top:0;
 }
