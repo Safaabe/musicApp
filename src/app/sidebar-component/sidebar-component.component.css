@@ -1,6 +1,6 @@
 /* Sidebar styles */
 .sidebar {
-    background-color: #1D1A1A;
+    background-color: #1A181F;
     width: 250px;
     height: 100vh;
     position: fixed;
@@ -13,15 +13,14 @@
 
 /* Logo styles */
 .sidebar .side-hearder .logo img {
-    width: 100%; /* Adjust logo size if necessary */
+    width: 100%; 
+    
 }
 
-/* Features container (move the list lower) */
+
 .features {
-    margin-top: 80px; /* This moves the list lower by 60px (adjust as needed) */
+    margin-top: 80px;
 }
-
-/* Links styles inside sidebar */
 ul li a {
     color: white;
     font-size: 18px;
@@ -32,8 +31,8 @@ ul li a {
     font-weight: 500;
     position: relative;
     padding-right: 10px;
-    padding-left: 10px; /* Added for consistency */
-    margin-top: 15px; /* Space between items */
+    padding-left: 10px; 
+    margin-top: 15px; 
 }
 
 /* Sidebar icon styling */
@@ -43,7 +42,7 @@ ul li a i {
     padding-right: 15px;
 }
 
-/* Links inside sidebar under playlist section */
+
 .playlist a {
     text-decoration: none;
     font-family: "Roboto", sans-serif;
@@ -51,10 +50,10 @@ ul li a i {
     font-size: 20px;
     color: white;
     display: inline-block;
-    margin-right: 10px; /* Space between Playlists and plus */
+    margin-right: 10px;
 }
 
-/* Plus icon styling */
+
 .playlist .plus {
     font-size: 30px;
     color: #824575;
@@ -62,7 +61,7 @@ ul li a i {
     display: inline-block;
 }
 
-/* Line divider */
+
 .line {
     width: 100%;
     height: 1px;
@@ -70,19 +69,18 @@ ul li a i {
     margin: 20px 0;
 }
 
-/* Extra margin between links */
+
 ul li {
     list-style-type: none;
 }
 
-/* Image (logo) styling */
+
 .image {
     width: 150px;
     position: absolute;
     top: 0;
 }
 
-/* Ensure the sidebar header has some space */
 .side-hearder {
-    margin-bottom: 30px; /* Adjust as needed */
+    margin-bottom: 30px; 
 }

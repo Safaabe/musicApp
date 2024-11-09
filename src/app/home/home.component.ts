@@ -5,7 +5,12 @@ import { SidebarComponentComponent } from '../sidebar-component/sidebar-componen
   selector: 'app-home',
   standalone: true,
   imports: [SidebarComponentComponent],
-  templateUrl: './home.component.html',
+  template:`
+
+<div class="main-content">
+  <h2>hi</h2>
+</div>`
+,
   styleUrls: ['./home.component.css'] 
 })
 export class HomeComponent {
