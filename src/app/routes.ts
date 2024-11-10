@@ -1,8 +1,6 @@
 import { Routes, RouterOutlet } from '@angular/router';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'; 
 import { ExploreComponent } from './explore/explore.component';
-
- 
 const RouterConfig: Routes=[
     {
         path:'',
@@ -13,9 +11,8 @@ const RouterConfig: Routes=[
     {
         path:'explore',
         component: ExploreComponent,
-        title:'explore'
+        title:'Explore'
     }
 ];
-  
 
 export default RouterConfig;
