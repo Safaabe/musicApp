@@ -9,6 +9,7 @@
     padding: 20px;
     overflow-y: auto;
     color: white;
+    border-right: 1px solid #ccc;
 }
 
 /* Logo styles */
@@ -20,7 +21,7 @@
 
 .features {
     margin-top: 80px;
-}
+    }
 ul li a {
     color: white;
     font-size: 18px;

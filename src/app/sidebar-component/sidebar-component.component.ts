@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import {MatDialog} from '@angular/material/dialog';
+import { AddPlaylistComponent } from '../add-playlist/add-playlist.component';
 @Component({
   selector: 'app-sidebar-component',
   standalone: true,
@@ -11,4 +12,12 @@ import { RouterModule } from '@angular/router';
 })
 export class SidebarComponentComponent {
 
+  constructor(private dialog: MatDialog) {}
+
+  openAddPlaylistDialog(): void {
+    this.dialog.open(AddPlaylistComponent, {
+      width: '400px',
+      data: { title: 'Add New Playlist' }
+    });
+  }
 }
