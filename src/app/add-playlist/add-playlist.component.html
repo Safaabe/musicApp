@@ -1,3 +1,13 @@
-<html>
-    
-</html>
+<h1 mat-dialog-title>Add Playlist</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Playlist Name" [(ngModel)]="playlistName">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Description" [(ngModel)]="description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onAdd()">Add</button>
+</div>

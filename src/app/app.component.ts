@@ -4,6 +4,7 @@ import { SidebarComponentComponent } from './sidebar-component/sidebar-component
 import { ExploreComponent } from './explore/explore.component';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

@@ -3,12 +3,15 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { AddPlaylistComponent } from '../add-playlist/add-playlist.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 @Component({
   selector: 'app-sidebar-component',
   standalone: true,
   imports: [ RouterModule,CommonModule],
   templateUrl: './sidebar-component.component.html',
   styleUrl: './sidebar-component.component.css'
+
 })
 export class SidebarComponentComponent {
 
