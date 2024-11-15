@@ -1,31 +1,33 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // Utilisez CommonModule ici
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-add-playlist',
   standalone: true,
-  imports: [ BrowserModule,
-    BrowserAnimationsModule,
+  imports: [
+    CommonModule, // Remplace BrowserModule
     MatDialogModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule,],
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   templateUrl: './add-playlist.component.html',
-  styleUrl: './add-playlist.component.css'
+  styleUrls: ['./add-playlist.component.css'],
 })
 export class AddPlaylistComponent {
-
   playlistForm: FormGroup;
 playlistName: any;
 description: any;
+
   constructor(
     public dialogRef: MatDialogRef<AddPlaylistComponent>,
     private fb: FormBuilder,
@@ -34,7 +36,7 @@ description: any;
     this.playlistForm = this.fb.group({
       playlistName: [''],
       description: [''],
-      songs: ['']
+      songs: [''],
     });
   }
 
@@ -48,4 +50,3 @@ description: any;
     this.dialogRef.close();
   }
 }
-

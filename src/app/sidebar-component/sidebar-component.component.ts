@@ -1,26 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddPlaylistComponent } from '../add-playlist/add-playlist.component';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-sidebar-component',
   standalone: true,
-  imports: [ RouterModule,CommonModule],
+  imports: [RouterModule, CommonModule, MatDialogModule, AddPlaylistComponent],
   templateUrl: './sidebar-component.component.html',
-  styleUrl: './sidebar-component.component.css'
-
+  styleUrls: ['./sidebar-component.component.css'],
 })
 export class SidebarComponentComponent {
-
   constructor(private dialog: MatDialog) {}
 
   openAddPlaylistDialog(): void {
     this.dialog.open(AddPlaylistComponent, {
       width: '400px',
-      data: { title: 'Add New Playlist' }
+      data: { title: 'Add New Playlist' },
     });
   }
 }
