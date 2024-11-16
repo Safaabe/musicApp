@@ -31,6 +31,7 @@ export class AddPlaylistComponent {
   selectedFile: File | null = null; // Fichier sélectionné
 
   @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>; // Référence au champ d'entrée de fichier
+Annuler: any;
 
   constructor(
     public dialogRef: MatDialogRef<AddPlaylistComponent>,

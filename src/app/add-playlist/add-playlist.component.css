@@ -7,7 +7,7 @@
 .image-container {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
   }
@@ -54,5 +54,39 @@
   
   .upload-button mat-icon {
     font-size: 24px; 
-    color: #f0f0f0; 
+    color: #1A181F; 
+  }
+  button.mat-button {
+    color: #f44336; /* Red color for Cancel */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.mat-button:hover {
+    background-color: rgba(244, 67, 54, 0.1); /* Light red background on hover */
+  }
+  
+  /* Style for the Create button */
+  button.mat-raised-button.add {
+    background-color: #4caf50; /* Green background for Create */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.mat-raised-button.add:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  /* Optional: Center the buttons horizontally */
+  div[mat-dialog-actions] {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
   }
