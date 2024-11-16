@@ -1,13 +1,46 @@
-<h1 mat-dialog-title>Add Playlist</h1>
-<div mat-dialog-content>
-  <mat-form-field>
-    <input matInput placeholder="Playlist Name" [(ngModel)]="playlistName">
-  </mat-form-field>
-  <mat-form-field>
-    <textarea matInput placeholder="Description" [(ngModel)]="description"></textarea>
-  </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Cancel</button>
-  <button mat-button (click)="onAdd()">Add</button>
-</div>
+
+<div class="pop-up">
+    <h1 mat-dialog-title class="titre">Créer ma playlist</h1>
+    <div mat-dialog-content>
+      <!-- Image de la playlist avec un bouton pour sélectionner une nouvelle image -->
+      <div class="image-container">
+        <img
+          [src]="imagePreview || 'assets/default.png'"
+          alt="Playlist Image"
+          class="playlist-image"
+        />
+        <button
+          mat-icon-button
+          class="upload-button"
+          (click)="triggerFileInput()"
+        >
+          <mat-icon>camera_alt</mat-icon>
+        </button>
+        <input
+          type="file"
+          #fileInput
+          (change)="onFileSelected($event)"
+          accept="image/*"
+          hidden
+        />
+      </div>
+  
+      <!-- Champ pour le nom de la playlist -->
+      <mat-form-field class="full-width">
+        <mat-label>Nom de la playlist</mat-label>
+        <input matInput [(ngModel)]="playlistName" />
+      </mat-form-field>
+  
+      <!-- Champ pour la description -->
+      <mat-form-field class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="description"></textarea>
+      </mat-form-field>
+    </div>
+  
+    <div mat-dialog-actions align="end">
+      <button mat-button (click)="onCancel()">Annuler</button>
+      <button mat-raised-button color="primary" (click)="onAdd()">Créer</button>
+    </div>
+  </div>
+  

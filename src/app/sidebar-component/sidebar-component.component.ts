@@ -16,7 +16,7 @@ export class SidebarComponentComponent {
 
   openAddPlaylistDialog(): void {
     this.dialog.open(AddPlaylistComponent, {
-      width: '400px',
+      width: '900px',
       data: { title: 'Add New Playlist' },
     });
   }
