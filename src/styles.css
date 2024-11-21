@@ -2,3 +2,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field .mat-input-element {
+    background-color: #1A181F;
+    color: white;
+}
+
+.mat-form-field .mat-form-field-flex {
+    background-color: #1A181F;
+}
+
+.mat-form-field textarea {
+    background-color: #1A181F;
+    color: white;
+}
+
+.mat-form-field label {
+    color: white;
+}
+
+.mat-input-element::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}

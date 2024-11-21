@@ -38,18 +38,18 @@ Annuler: any;
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  // Ouvre le sélecteur de fichiers
+  // ouvrir la fenetre pour choisir une photo
   triggerFileInput(): void {
     this.fileInput.nativeElement.click();
   }
 
-  // Gestion de la sélection de fichier
+  //selection une photo
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
       this.selectedFile = input.files[0];
 
-      // Lire le fichier sélectionné et mettre à jour la prévisualisation
+      // Lire le fichier sélectionné 
       const reader = new FileReader();
       reader.onload = () => {
         this.imagePreview = reader.result;
@@ -58,12 +58,12 @@ Annuler: any;
     }
   }
 
-  // Valider et fermer la boîte de dialogue
+  // Valider et fermer le popup page
   onAdd(): void {
     const newPlaylist = {
       name: this.playlistName,
       description: this.description,
-      image: this.selectedFile, // Retourne le fichier image
+      image: this.selectedFile,
     };
     console.log('Nouvelle playlist créée :', newPlaylist);
     this.dialogRef.close(newPlaylist);
